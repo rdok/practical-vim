@@ -1,0 +1,61 @@
+<!doctype html>
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <title>Practical Vim</title>
+
+        <style>
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: georgia, palatino, serif;
+}
+
+/* Remove extra left and right margins, due to padding in columns */
+.row {margin: 0 -5px;}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+    padding-bottom: 15px;
+}
+
+/* Style the counter cards */
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* this adds the "card" effect */
+    padding: 16px;
+    text-align: center;
+    background-color: wheat;
+    float: left;
+    width: 23%;
+    padding: 0 10px 15px 10px;
+    margin: 1%;
+}
+
+      /* Responsive columns - one column layout (vertical) on small screens */
+      @media screen and (max-width: 600px) {
+          .card {
+              width: 100%;
+              display: block;
+              margin-bottom: 20px;
+          }
+      }
+
+        </style>
+    </head>
+    <body>
+
+        <div id="container"></div>
+
+        <script src="app.js"></script>
+    </body>
+</html>
+

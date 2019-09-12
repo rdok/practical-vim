@@ -1,0 +1,9 @@
+version: "3.7"
+
+services:
+
+  practical-vim.rdok.dev:
+    working_dir: /app
+    volumes:
+      - "./public:/usr/share/nginx/html"
+      - ".:/app"

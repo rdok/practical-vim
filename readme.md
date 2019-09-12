@@ -1,13 +1,11 @@
 # Practical-VIM
 Journey through the Practical Vim: Edit Text at the Speed of Thought
 
-## 1 The Vim Way
-Repetition is the vim way. Train yourself to code by crafting repeatable unit of works, repeatable by vim. This is the vim way.
+[![Build Status](https://jenkins.rdok.dev/buildStatus/icon?job=practical-vim)](https://jenkins.rdok.dev/view/Training/job/practical-vim/)
 
-### Repeatable changes
-> A change could act at the level of individual characters, entire lines, or even whole file. Motions are not repeatable because they do not change text.
-
-- The `x` command deletes the character under the cursor.
-- The `dd` command performs a deletion on the current line as a whole.
-- The `>G` command increases the indentation from the current line until the end of the file.
+## Local Dev
+- `cp .env.local .env`
+- `echo '127.0.0.1   practical-vim.rdok.local' >> /etc/hosts`
+- `docker-compose -f docker-compose.yml -f docker-compose.local.yml up -d`
+- Visit http://practical-vim.rdok.local:3003/
 
