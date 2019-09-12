@@ -1,22 +1,47 @@
-tips().forEach(function(tip, index) {
-    appendCard(tip)
+var tips = tips()
+
+chunkTips(tips).forEach(function(tips, index){
+    createRow(tips)
 })
 
-function appendCard(card) {
+function chunkTips(tips) {
+    var chunkSize = 4
+    var output = []
+
+    for (index = 0; index < tips.length; index += chunkSize) {
+        output.push( tips.slice( index , index + chunkSize ) )
+    }
+
+    return output
+}
+
+function createRow(tips) {
+    let container = document.getElementById('container')
+
+    let row = document.createElement('div')
+    row.className = 'row'
+
+    tips.forEach(function(tip, index){
+        appendCard(row, tip)
+    })
+
+    container.appendChild(row)
+}
+
+function appendCard(container, tip) {
     let cardElement = document.createElement('div')
     cardElement.className = 'card'
 
-    let titleTextNode = document.createTextNode(card.title)
+    let titleTextNode = document.createTextNode(tip.title)
     let titleElement = document.createElement('h4')
     titleElement.appendChild(titleTextNode)
 
     let descriptionElement = document.createElement('p')
-    descriptionElement.innerHTML = card.description;
+    descriptionElement.innerHTML = tip.description;
 
     cardElement.appendChild(titleElement)
     cardElement.appendChild(descriptionElement)
-
-    document.getElementById("container").appendChild(cardElement)
+    container.appendChild(cardElement)
 }
 
 function tips() {
