@@ -1,4 +1,5 @@
 var tips = tips()
+tips = shuffle(tips)
 
 chunkTips(tips).forEach(function(tips, index){
     createRow(tips)
@@ -60,6 +61,21 @@ function postItColor() {
     return colors[Math.floor(Math.random()*colors.length)];
 }
 
+function shuffle(originalData) {
+    let data = Array.from(originalData)
+    let output = []
+
+    originalData.forEach(function(item, index) {
+        let max = data.length - 1
+        var randomIndex = Math.floor(Math.random() * max)
+
+        output.push(data[randomIndex])
+        data.splice(randomIndex, 1)
+    })
+
+    return output
+}
+
 function tips() {
     return [
         {
@@ -99,6 +115,10 @@ function tips() {
             "title": "9 Compose Repeatable Changes",
             "description": "Vim is optimized for repetition. In order to exploit this, we have to be mindful of how we compose our changes.",
             "code": "Delete a word: daw"
+        },
+        {
+            "title": "10 Use Counts to Do Simple Arithmetic",
+            "description": "Most Normal mode commands can be executed with a count. We can exploit this feature to do simple arithmetic"
         }
     ]
 }
