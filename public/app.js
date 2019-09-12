@@ -31,17 +31,33 @@ function createRow(tips) {
 function appendCard(container, tip) {
     let cardElement = document.createElement('div')
     cardElement.className = 'card'
+    cardElement.style.background = postItColor()
 
     let titleTextNode = document.createTextNode(tip.title)
     let titleElement = document.createElement('h4')
     titleElement.appendChild(titleTextNode)
+    cardElement.appendChild(titleElement)
 
     let descriptionElement = document.createElement('p')
     descriptionElement.innerHTML = tip.description;
-
-    cardElement.appendChild(titleElement)
     cardElement.appendChild(descriptionElement)
+
+    if( tip.code ) {
+        let codeElement = document.createElement('code')
+        codeElement.innerHTML = tip.code
+        let preElement = document.createElement('pre')
+        preElement.appendChild(codeElement)
+        cardElement.appendChild(preElement)
+    }
+
     container.appendChild(cardElement)
+}
+
+function postItColor() {
+
+    let colors = ['yellowgreen', 'hotpink', 'yellow', 'orange', 'royalblue']
+
+    return colors[Math.floor(Math.random()*colors.length)];
 }
 
 function tips() {
@@ -81,7 +97,8 @@ function tips() {
         },
         {
             "title": "9 Compose Repeatable Changes",
-            "description": "Vim is optimized for repetition. In order to exploit this, we have to be mindful of how we compose our changes."
+            "description": "Vim is optimized for repetition. In order to exploit this, we have to be mindful of how we compose our changes.",
+            "code": "Delete a word: daw"
         }
     ]
 }
