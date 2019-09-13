@@ -80,7 +80,7 @@ function tips() {
     return [
         {
             "title": "1 Meet the Dot Command",
-            "description": "The dot command lets us repeat the last change. It is the most powerful and versatile command in Vim.<br/><a target='_blank' href='https://vimhelp.org/repeat.txt.html#'>Docs</a>"
+            "description": "The dot command lets us repeat the last change. It is the most powerful and versatile command in Vim.<br/><a target='_blank' href='https://vimhelp.org/repeat.txt.html#'>Repeat</a>"
         },
         {
             "title": "2 Don't Repeat Yourself",
@@ -118,7 +118,11 @@ function tips() {
         },
         {
             "title": "10 Use Counts to Do Simple Arithmetic",
-            "description": "Most Normal mode commands can be executed with a count. We can exploit this feature to do simple arithmetic"
+            "description": "Most Normal mode commands can be executed with a count. We can exploit this feature to do simple arithmetic.<br/><a href='https://vimhelp.org/intro.txt.html#count' target='_blank'>Count</a>, <a href='https://vimhelp.org/change.txt.html#CTRL-A' target='_blank'>Add Count</a>"
+        },
+        {
+            "title": "11 Don't Count If You Can Repeat",
+            "description": "We can minimize the keystrokes required to perform certain tasks by providing a count, but that doesn't mean that we should. Consider the pros and cons of counting versus repeating."
         }
     ]
 }
