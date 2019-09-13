@@ -126,11 +126,11 @@ function tips() {
         },
         {
             "title": "12 Combine and Conquer",
-            "description": "Much of Vim's power stems from the way that operators and motions can be combined.<br/><a href='https://vimhelp.org/motion.txt.html#operator' target='_blank'>Motions and Operators</a><br/><code>zf</code>1"
+            "description": "Much of Vim's power stems from the way that operators and motions can be combined.<br/><a href='https://vimhelp.org/motion.txt.html#operator' target='_blank'>Motions and Operators</a><br/><code>zf</code>"
         },
         {
             "title": "13 Make Corrections Instantly from Insert Mode",
-            "description": "If we make a mistake while composing text in Insert mode, we can fix it immediately. There's no need to change modes. Besides the backspace key, we can use a couple of other Insert mode commands to make corrections."
+            "description": "If we make a mistake while composing text in Insert mode, we can fix it immediately. There's no need to change modes. Besides the backspace key, we can use a couple of other Insert mode commands to make corrections. <br/><code>&#60;C-w&#62;</code>"
         }
     ]
 }
