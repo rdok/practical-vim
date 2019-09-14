@@ -131,6 +131,30 @@ function tips() {
         {
             "title": "13 Make Corrections Instantly from Insert Mode",
             "description": "If we make a mistake while composing text in Insert mode, we can fix it immediately. There's no need to change modes. Besides the backspace key, we can use a couple of other Insert mode commands to make corrections. <br/><code>&#60;C-w&#62;</code>"
+        },
+        {
+            "title": "14 Get Back to Normal Mode",
+            "description": "Insert mode is specialized for one task--entering text--whereas Normal mode is where we spend most of our time (as the name suggests). So it's important to be able to switch quickly between them. <br/><i>Insert Normal Mode: </i><code>&#60;C-o&#62;"
+        },
+        {
+            "title": "15 Paste from a Register Without Leaving Insert Mode",
+            "description": "Vim's yank and put operations are usually executed from Normal mode, but sometimes we might want to paste text into the document without leaving insert mode. <br/><code>yt,</code> + <code>&#60;C-r&#62;0</code>"
+        },
+        {
+            "title": "16 Do Back-of-the-Envelope Calculations in Place",
+            "description": "The expression register allows us to perform calculations and then insert the result directly into our document. In this tip, we'll see one application for this powerful feature. <br/><code>&#60;C-r&#62;=</code>"
+        },
+        {
+            "title": "17 Insert Unusual Characters by Character Code",
+            "description": "Vim can insert any character by its numeric code. This can be handy for entering symbols that are not found on the keyboard.<br/><code>&#60;C-v&#62;200</code>"
+        },
+        {
+            "title": "18 Insert Unusual Characters by Digraph",
+            "description": "While Vim allows us to insert any character by its numeric code, these can be hard to remember and awkward to type. We can also insert unusual characters as diagraphs: pairs of characters that are easy to remember."
+        },
+        {
+            "title": "19 Overwrite Existing Text with Replace Mode",
+            "description": "Replace mode is identical to Insert Mode, except that it overwrites existing text in the document.<br/><code>R</code>, <code>gR</code>"
         }
     ]
 }
