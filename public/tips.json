@@ -104,5 +104,21 @@
     {
         "title": "26 Append After a Ragged Visual Block",
         "description": "Visual-Block mode is great for operating on rectangular chunks of code such as lines and columns, but it's not confined to rectangular regions of text."
+    },
+    {
+        "title": "27 Meet Vim's Command Line",
+        "description": "Command-Line mode prompts us to enter an Ex command, a search pattern, or an expression. In this tip, we'll meet a selection of Ex commands that operate on the text in a buffer, and we'll learn about some of the special key mappings that can be used in this mode.q"
+    },
+    {
+        "title": "28 Execute a Command on One or More Consecutive Lines",
+        "description": "Many Ex commands can be given a [range] of lines to act upon. We can specify the start and end of a range with either a line number, a mark, or a pattern.<br/><ul><li><code>.</code> symbol represents the current line.</li><li><code>$</code> symbol represents the end of the buffer.</li><li><code>%</code> symbol stands for all the lines in the current file.</li></ul>"
+    },
+    {
+        "title": "29 Duplicate or Move Lines Using `:t` and `:m` Commands.",
+        "description": "The :copy command (and its shorthand :t) lets us duplicate one or more lines from one part of the document to another, while the :move command lets us place them somewhere else in the document.<br/><code>@:</code>"
+    },
+    {
+        "title": "30 Run Normal Mode Commands Across a Range",
+        "description": "If we want to run a Normal mode command on a series of consecutive lines, we can do so using the :normal command. When used in combination with the dot command or a macro, we can perform repetitive tasks with very little effort."
     }
 ]
