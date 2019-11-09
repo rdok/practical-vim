@@ -1,12 +1,12 @@
 pipeline {
     triggers { cron('H H(18-19) * * *') }
-    options { buildDiscarder(logRotator(daysToKeepStr: '30', numToKeepStr: '100') ) }
+    options { buildDiscarder(logRotator(daysToKeepStr: '5') ) }
     environment {
         VIRTUAL_HOST = 'practical-vim.rdok.dev'
         VIRTUAL_PORT = 3003
         LETSENCRYPT_HOST = 'practical-vim.rdok.dev'
-        LETSENCRYPT_EMAIL = 'r.dokollari@gmail.com'
-        DEFAULT_EMAIL = 'r.dokollari@gmail.com'
+        LETSENCRYPT_EMAIL = credentials('rdok-email')
+        DEFAULT_EMAIL = credentials('rdok-email')
     }
     agent { label "linux" }
     stages {
