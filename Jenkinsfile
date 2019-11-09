@@ -10,20 +10,20 @@ pipeline {
     }
     agent { label "linux" }
     stages {
-        stage('Build') {
-            steps { echo 'build' }
-        }
-        stage('Test') {
-            steps { echo 'build' }
-        }        
         stage('Deploy') {
             agent { label "rdok.dev" }
-            steps { sh '''
+            steps { 
+                sh '''
                 docker-compose build --pull 
                 docker-compose down
                 docker-compose up -d
-            ''' }
+                ''' 
+            }
         }
+        stage('Health Check') { 
+            agent { label "linux" }
+            steps { build 'health-check' }
+        } 
     }
     post {
         failure {
