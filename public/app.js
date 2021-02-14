@@ -2,8 +2,6 @@
 
     var tips = await fetch('tips.json').then(response => response.json())
 
-    tips = shuffle(tips)
-
     chunkTips(tips).forEach(function(tips, index){
         createRow(tips)
     })

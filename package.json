@@ -1,0 +1,14 @@
+{
+  "name": "practical-vim",
+  "version": "1.0.0",
+  "description": " Journey through the Practical Vim: Edit Text at the Speed of Thought ",
+  "repository": "git@github.com:rdok/practical-vim.git",
+  "author": "Rizart Dokollari",
+  "license": "MIT",
+  "devDependencies": {
+    "live-server": "^1.2.1"
+  },
+  "scripts": {
+    "start": "live-server ./public"
+  }
+}
