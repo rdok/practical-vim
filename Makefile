@@ -11,9 +11,9 @@ shell:
 
 test:
 	docker run --env CI=true --rm --volume "${CURRENT_DIR}":/app --workdir /app \
-		node:15-alpine3.10 sh -c 'yarn && yarn test'
+		node:15-alpine3.10 sh -c 'yarn --frozen-lockfile && yarn test'
 
 build:
 	docker run --env CI=true --rm --volume "${CURRENT_DIR}":/app --workdir /app \
-		--user "$(shell id -u):$(shell id -g)" node:15-alpine3.10 sh -c \
-		'yarn && yarn build'
+		 node:15-alpine3.10 sh -c \
+		'yarn --frozen-lockfile && yarn build'
