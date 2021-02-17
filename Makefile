@@ -13,7 +13,10 @@ test:
 	docker run --env CI=true --rm --volume "${CURRENT_DIR}":/app --workdir /app \
 		node:15-alpine3.10 sh -c 'yarn --frozen-lockfile && yarn test'
 
+.PHONY: build
 build:
-	docker run --env CI=true --rm --volume "${CURRENT_DIR}":/app --workdir /app \
+	docker run \
+		--env "PUBLIC_URL=$${WEBSITE_URL}" --env CI=true \
+		--rm --volume "${CURRENT_DIR}":/app --workdir /app \
 		 node:15-alpine3.10 sh -c \
 		'yarn --frozen-lockfile && yarn build'
