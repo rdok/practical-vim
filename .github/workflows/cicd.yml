@@ -32,6 +32,7 @@ jobs:
           echo ::set-output name=stack-name::"rdok-${ENVIRONMENT}-${NAME}"
           echo ::set-output name=domain::"${SUBDOMAIN}${NAME}.${BASE_DOMAIN}"
           echo ::set-output name=deploy-bucket::"rdok-${ENVIRONMENT}-deployments-us-east-1"
+      - run: make build
       - name: CloudFormation Package & Deploy
         run: |
           sam package \
@@ -51,7 +52,6 @@ jobs:
               WildcardCertificateARN=${{ secrets.WILDCARD_CERTIFICATE_ARN }}
       - name: Website Bucket Sync
         run: |
-          make build
           BUCKET_NAME=$( \
             aws cloudformation describe-stacks  \
             --stack-name ${{ steps.env.outputs.stack-name }} \
