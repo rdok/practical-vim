@@ -1,0 +1,66 @@
+[
+  {
+    "title": "10 Use Counts to Do Simple Arithmetic",
+    "description": "Most Normal mode commands can be executed with a count. We can exploit this feature to do simple arithmetic.<br/><a href='https://vimhelp.org/intro.txt.html#count' target='_blank'>Count</a>, <a href='https://vimhelp.org/change.txt.html#CTRL-A' target='_blank'>Add Count</a>"
+  },
+  {
+    "title": "11 Don't Count If You Can Repeat",
+    "description": "We can minimize the keystrokes required to perform certain tasks by providing a count, but that doesn't mean that we should. Consider the pros and cons of counting versus repeating."
+  },
+  {
+    "title": "12 Combine and Conquer",
+    "description": "Much of Vim's power stems from the way that operators and motions can be combined.<br/><a href='https://vimhelp.org/motion.txt.html#operator' target='_blank'>Motions and Operators</a><br/><code>zf</code>"
+  },
+  {
+    "title": "13 Make Corrections Instantly from Insert Mode",
+    "description": "If we make a mistake while composing text in Insert mode, we can fix it immediately. There's no need to change modes. Besides the backspace key, we can use a couple of other Insert mode commands to make corrections.",
+    "chords": [
+      {
+        "keystrokes": "<C-h>",
+        "description": "Delete back one character (backspace)"
+      },
+      {
+        "keystrokes": "<C-w>",
+        "description": "Delete back one word"
+      },
+      {
+        "keystrokes": "<C-u>",
+        "description": "Delete back to start of line"
+      }
+    ]
+  },
+  {
+    "title": "14 Get Back to Normal Mode",
+    "description": "Insert mode is specialized for one task--entering text--whereas Normal mode is where we spend most of our time (as the name suggests). So it's important to be able to switch quickly between them.",
+    "chords": [
+      {
+        "keystrokes": "<Esc>",
+        "description": "Switch to Normal mode"
+      },
+      {
+        "keystrokes": "<C-[>",
+        "description": "Switch to Normal mode"
+      },
+      {
+        "keystrokes": "<C-o>",
+        "description": "Switch to Insert Normal mode"
+      }
+    ]
+  },
+  {
+    "title": "15 Paste from a Register Without Leaving Insert Mode",
+    "description": "Vim's yank and put operations are usually executed from Normal mode, but sometimes we might want to paste text into the document without leaving insert mode. <br/><code>yt,</code> + <code>&#60;C-r&#62;0</code>"
+  },
+  {
+    "title": "16 Do Back-of-the-Envelope Calculations in Place",
+    "description": "The expression register allows us to perform calculations and then insert the result directly into our document. In this tip, we'll see one application for this powerful feature. <br/><code>&#60;C-r&#62;=</code>"
+  },
+  {
+    "title": "17 Insert Unusual Characters by Character Code",
+    "description": "Vim can insert any character by its numeric code. This can be handy for entering symbols that are not found on the keyboard.<br/><code>&#60;C-v&#62;200</code>"
+  },
+  {
+    "title": "18 Insert Unusual Characters by Digraph",
+    "description": "While Vim allows us to insert any character by its numeric code, these can be hard to remember and awkward to type. We can also insert unusual characters as diagraphs: pairs of characters that are easy to remember."
+  }
+]

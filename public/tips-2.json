@@ -1,0 +1,38 @@
+[
+  {
+    "title": "19 Overwrite Existing Text with Replace Mode",
+    "description": "Replace mode is identical to Insert Mode, except that it overwrites existing text in the document.<br/><code>R</code>, <code>gR</code>"
+  },
+  {
+    "title": "20 Grok Visual Mode",
+    "description": "Visual mode allows us to select a range of text and then operate upon it. However intuitive this might seem, Vim's perspective on selecting text is different from other text editors."
+  },
+  {
+    "title": "21 Define a Visual Selection",
+    "description": "Visual mode's three submodes deal with different kinds of text. In this tip, we'll look at ways of enabling each submode, as well as how to switch between them.<br/><code>&#60;C-v&#62;</code>, k<code>&#60;gv&#62;</code>"
+  },
+  {
+    "title": "22 Repeat Line-Wise Visual Commands",
+    "description": "When we use the dot command to repeat a change made to a visual selection, it repeats the change on the same range of text. In this tip, we'll make a change to a line-wise selection and then repeat it with dot command."
+  },
+  {
+    "title": "23 Prefer Operators to Visual Commands Where Possible",
+    "description": "Visual mode may be more intuitive than Vim's Normal mode of operation, but it has a weakness: it doesn't always play well with the dot command. We can route around this weakness by using Normal mode operators when appropriate."
+  },
+  {
+    "title": "24 Edit Tabular Data with Visual-Block Mode",
+    "description": "We can work with rows of text in any editor, but manipulating columns of text requires a more specialized tool. Vim provides this capability in the form of its Visual-Block mode, which we'll use to transform a plain-text table."
+  },
+  {
+    "title": "25 Change Columns of Text",
+    "description": "We can use Visual-Block mode to insert text into several lines of text simultaneously."
+  },
+  {
+    "title": "26 Append After a Ragged Visual Block",
+    "description": "Visual-Block mode is great for operating on rectangular chunks of code such as lines and columns, but it's not confined to rectangular regions of text."
+  },
+  {
+    "title": "27 Meet Vim's Command Line",
+    "description": "Command-Line mode prompts us to enter an Ex command, a search pattern, or an expression. In this tip, we'll meet a selection of Ex commands that operate on the text in a buffer, and we'll learn about some of the special key mappings that can be used in this mode.q"
+  }
+]

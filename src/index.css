@@ -7,3 +7,38 @@ body {
     -moz-osx-font-smoothing: grayscale;
 }
 
+code {
+    background-color: #eee;
+    border-radius: 3px;
+    font-family: monospace;
+    padding: 0 3px;
+}
+
+.pagination ul {
+    /*display: inline-block;*/
+    /*padding-right: 15px;*/
+}
+
+.pagination li {
+    font-size: calc(5px + 2vmin);
+    display: inline-block;
+}
+
+.pagination a {
+    border: 1px solid #ddd;
+    cursor: pointer;
+    text-decoration: none;
+    color: wheat;
+    padding: 8px 16px;
+}
+
+.pagination .active {
+    font-weight: bold;
+}
+
+.pagination .disabled {
+    pointer-events: none;
+}
+ul.pagination li.disabled a {
+    color: grey
+}
