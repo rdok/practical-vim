@@ -42,6 +42,7 @@ export default class TipList extends React.Component {
           marginPagesDisplayed={2}
           pageRangeDisplayed={5}
           onPageChange={this.handlePaginationChange}
+          disableInitialCallback={true}
           containerClassName={'pagination'}
           subContainerClassName={'pages pagination'}
           activeClassName={'active'}
