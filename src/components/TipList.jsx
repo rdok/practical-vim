@@ -5,31 +5,42 @@ import ReactPaginate from 'react-paginate';
 import { DefaultTips } from "../tips-home";
 
 export default class TipList extends React.Component {
+  state = { pageCount: 4, tips: [] };
+
   constructor(props) {
     super(props);
-    this.handlePaginationChange = this.handlePaginationChange.bind(this);
+    this.handlePageChange = this.handlePageChange.bind(this);
   }
 
-  handlePaginationChange({ selected }) {
+  componentDidMount() {
+    const selected = this.props.initialPage;
+    this.renderTips(selected);
+  }
+
+  renderTips(selected) {
     if (selected === 0) {
-      const db = { ...this.props.db, tips: DefaultTips, initialPage: selected };
-      this.props.onPaginationChange(db);
+      this.setState(() => ({ tips: DefaultTips }));
       return;
     }
 
-    fetch(`tips-${selected}.json`).then(response => response.json())
+    fetch(`tips-${selected}.json`)
+      .then(response => response.json())
       .then((tips) => {
-        const db = { ...this.props.db, tips, initialPage: selected };
-        this.props.onPaginationChange(db);
+        this.setState({ tips });
       });
   }
 
+  handlePageChange({ selected }) {
+    this.props.onPageChange({ selected });
+    this.renderTips(selected);
+  }
+
   render() {
-    const { initialPage, tips } = this.props.db;
-    const { pageCount } = this.props.settings;
+    const { tips, pageCount } = this.state;
+    const { initialPage } = this.props;
 
     return (
-      <div>
+      <div key={initialPage}>
         <div className="TipList">
           {tips.map((tip, index) => (<Tip key={index} tip={tip}/>))}
         </div>
@@ -41,12 +52,12 @@ export default class TipList extends React.Component {
           pageCount={pageCount}
           marginPagesDisplayed={2}
           pageRangeDisplayed={5}
-          onPageChange={this.handlePaginationChange}
-          disableInitialCallback={true}
+          onPageChange={this.handlePageChange}
           containerClassName={'pagination'}
           subContainerClassName={'pages pagination'}
           activeClassName={'active'}
           initialPage={initialPage}
+          disableInitialCallback={true}
         />
       </div>
     );

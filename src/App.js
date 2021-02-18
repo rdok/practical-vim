@@ -1,45 +1,31 @@
 import './App.css';
 import React from 'react';
 import TipList from "./components/TipList";
-import { DefaultTips } from "./tips-home";
 
 export default class App extends React.Component {
-  state = {
-    settings: {
-      pageCount: 3,
-    },
-    db: {
-      tips: DefaultTips,
-      initialPage: 0,
-    }
-  };
-
-  constructor(props) {
-    super(props);
-    this.handleDBSave = this.handleDBSave.bind(this);
-  }
+  state = { initialPage: 0 };
 
   componentDidMount() {
     try {
-      let db = JSON.parse(localStorage.getItem('db'));
-      db && this.setState(() => ({ db }));
-      // db && this.setState({ db, ...db });
-      console.log('loaded', { db });
+      let db = JSON.parse(localStorage.getItem('tip_list'));
+      db && this.setState(() => ({ ...db }));
     } catch (e) {
       // loads default options
     }
   }
 
-  handleDBSave(db) {
-    this.setState(() => ({ db }));
-    localStorage.setItem('db', JSON.stringify(db));
+  handlePageChange({ selected }) {
+    const db = {initialPage: selected}
+    localStorage.setItem('tip_list', JSON.stringify(db));
   }
 
   render() {
-    const { settings, db } = this.state;
-
     return <div className="App" data-testid='app-test-id'>
-      <TipList settings={settings} db={db} onPaginationChange={this.handleDBSave}/>
+      <TipList
+        key={this.state.initialPage}
+        initialPage={this.state.initialPage}
+        onPageChange={this.handlePageChange}
+      />
     </div>;
   }
 }

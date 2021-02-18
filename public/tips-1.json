@@ -49,7 +49,13 @@
   },
   {
     "title": "15 Paste from a Register Without Leaving Insert Mode",
-    "description": "Vim's yank and put operations are usually executed from Normal mode, but sometimes we might want to paste text into the document without leaving insert mode. <br/><code>yt,</code> + <code>&#60;C-r&#62;0</code>"
+    "description": "Vim's yank and put operations are usually executed from Normal mode, but sometimes we might want to paste text into the document without leaving insert mode.",
+    "chords": [
+      {
+        "keystrokes": "<C-r>0",
+        "description": "While in insert mode, paste from register located at 0 address."
+      }
+    ]
   },
   {
     "title": "16 Do Back-of-the-Envelope Calculations in Place",
