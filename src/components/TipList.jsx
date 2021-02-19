@@ -2,7 +2,7 @@ import Tip from "./Tip";
 import './TipList.css';
 import React from 'react';
 import ReactPaginate from 'react-paginate';
-import { DefaultTips } from "../tips-home";
+import { DefaultTips } from "../default-tips";
 
 export default class TipList extends React.Component {
   state = { pageCount: 4, tips: [] };

@@ -5,10 +5,9 @@ services:
     image: node:15.8
     working_dir: /practical-vim
     ports:
-      - ${PORT:-4000}:${PORT:-4000}
+      - ${PORT:-4010}:${PORT:-4010}
     environment:
-      - PORT=${PORT:-4000}
+      - PORT=${PORT:-4010}
       - CHOKIDAR_USEPOLLING=true
     volumes:
       - ".:/practical-vim"
-    command: ls -lat
