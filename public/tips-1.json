@@ -59,7 +59,14 @@
   },
   {
     "title": "16 Do Back-of-the-Envelope Calculations in Place",
-    "description": "The expression register allows us to perform calculations and then insert the result directly into our document. In this tip, we'll see one application for this powerful feature. <br/><code>&#60;C-r&#62;=</code>"
+    "description": "The expression register allows us to perform calculations and then insert the result directly into our document. In this tip, we'll see one application for this powerful feature.",
+    "chords": [
+      {
+        "keystrokes": "<C-r>=6*35<CR>",
+        "description": "Inserts 210."
+      }
+    ]
+
   },
   {
     "title": "17 Insert Unusual Characters by Character Code",
