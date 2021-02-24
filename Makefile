@@ -1,7 +1,11 @@
 CURRENT_DIR = $(shell pwd)
 
-start: node_modules
+start: node_modules git-pull
 	docker-compose run --service-ports --rm node yarn start
+
+.PHONY: git-pull
+git-pull:
+	git pull origin main
 
 node_modules:
 	docker-compose run --rm node yarn
