@@ -15,6 +15,17 @@ export default class TipList extends React.Component {
   componentDidMount() {
     const selected = this.props.initialPage;
     this.renderTips(selected);
+    document.addEventListener("keydown", this.handleKeyDown);
+  }
+
+  handleKeyDown({keyCode}) {
+    const LEFT_ARROW = 37, RIGHT_ARROW = 39;
+    const validKeysPressed = [LEFT_ARROW, RIGHT_ARROW].includes(keyCode)
+    if (!validKeysPressed) return;
+
+    const label = RIGHT_ARROW === keyCode ? 'Next page' : 'Previous page';
+    const element = document.querySelector(`[aria-label="${label}"]`);
+    element.click()
   }
 
   renderTips(selected) {
