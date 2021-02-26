@@ -73,13 +73,27 @@
     "description": "Vim can insert any character by its numeric code. This can be handy for entering symbols that are not found on the keyboard.",
     "chords": [
       {
-        "keystrokes": "<C-v>220",
-        "description": "Inserts the symbol Ü"
+        "keystrokes": "<C-v>{123}",
+        "description": "Inserts character by decimal code"
+      },
+      {
+        "keystrokes": "<C-v>u{123}",
+        "description": "Inserts character by hexadecimal code"
+      },
+      {
+        "keystrokes": "<C-v>{nondigit}",
+        "description": "Inserts nondigit literally"
       }
     ]
   },
   {
     "title": "18 Insert Unusual Characters by Digraph",
-    "description": "While Vim allows us to insert any character by its numeric code, these can be hard to remember and awkward to type. We can also insert unusual characters as diagraphs: pairs of characters that are easy to remember."
-  }
+    "description": "While Vim allows us to insert any character by its numeric code, these can be hard to remember and awkward to type. We can also insert unusual characters as diagraphs: pairs of characters that are easy to remember. You can view a list of the available digraphs by running :digraphs. ",
+    "chords": [
+      {
+        "keystrokes": "<C-k>{char1}{char2}",
+        "description": "Inserts character represented by {char1}{char2} digraph"
+      }
+    ]
+ }
 ]
