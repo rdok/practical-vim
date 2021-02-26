@@ -70,7 +70,13 @@
   },
   {
     "title": "17 Insert Unusual Characters by Character Code",
-    "description": "Vim can insert any character by its numeric code. This can be handy for entering symbols that are not found on the keyboard.<br/><code>&#60;C-v&#62;200</code>"
+    "description": "Vim can insert any character by its numeric code. This can be handy for entering symbols that are not found on the keyboard.",
+    "chords": [
+      {
+        "keystrokes": "<C-v>220",
+        "description": "Inserts the symbol Ü"
+      }
+    ]
   },
   {
     "title": "18 Insert Unusual Characters by Digraph",
